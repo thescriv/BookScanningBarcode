@@ -17,28 +17,26 @@ app.use('/b', (req, res, next) => {
 app.get('/b/:id', async (req, res) => {
   const { id } = req.params
 
+  console.log(`received ` + id)
+
   if (!stack.has(id)) {
     stack.add(id)
 
-    let ret
-
+    console.log(`processing...`)
     try {
-      ret = await validOrNot(id)
-      console.log('get it')
+      await validOrNot(id)
     } catch (e) {
       console.log(e.message)
-      console.log('error')
     }
-
-    res.send(ret)
   } else {
     console.log('already proceed')
-    res.send(null)
   }
+  res.send({ body: id })
 })
 
 async function validOrNot(result) {
   const browser = await puppeteer.launch()
+
   // Création d’un nouvel onglet
   const page = await browser.newPage()
 

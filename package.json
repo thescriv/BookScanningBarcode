@@ -19,6 +19,7 @@
   },
   "scripts": {
     "start-front": "react-scripts start",
+    "build": "react-scripts build",
     "start-api": "nodemon node.js",
     "start": "npm-run-all -p -r start-front start-api"
   },

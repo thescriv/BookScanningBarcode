@@ -44,9 +44,9 @@ function App() {
         variant='contained'
         color='primary'
         onClick={() => setCamera(!camera)}
-        style={{ width: '50px', heigth: '50px', 'margin-left': '300px' }}
+        style={{ width: '125px', heigth: '50px', 'margin-left': '300px' }}
       >
-        {camera ? 'Stop' : 'Start'}
+        {camera ? 'Stop Webcam' : 'Start Webcam'}
       </Button>
       <h2
         className='text-black-50 mx-auto mt-2 mb-5'

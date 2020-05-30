@@ -1,6 +1,9 @@
 ### To launch the project
 
 > npm  i
+
+and
+
 > npm run start
 
 ### How to use
